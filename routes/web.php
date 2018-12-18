@@ -12,8 +12,26 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/home', 'HorekaController@home')->name('home');
+
+Route::get('/about', 'HorekaController@about')->name('about');
+
+Route::get('/contact', 'HorekaController@contact')->name('contact');
+
+Route::get('/gallery', 'HorekaController@gallery')->name('gallery');
+
+Route::get('/action', 'HorekaController@action')->name('action');
+
+Route::get('/history', 'HorekaController@history')->name('history');
+
+Route::get('/textile', 'HorekaController@textile')->name('textile');
+
+Route::get('/application', 'HorekaController@application')->name('application');
+
+Route::get('/detail', 'HorekaController@detail')->name('detail');
 
 
 Route::group(['prefix' => 'admin'], function () {
